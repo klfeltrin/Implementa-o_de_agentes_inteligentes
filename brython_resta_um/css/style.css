@@ -1,0 +1,21 @@
+body{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    margin:0px;
+}
+
+.jogo {
+    LINE-HEIGHT: 0PX;
+    font-size: 50PX;
+    margin: 0 auto;
+}
+.jogo tr td{    
+    border: 1px solid black;
+    padding: 20px;
+}
+.jogo tr td a{
+    vertical-align: text-top;
+    cursor:pointer;
+}

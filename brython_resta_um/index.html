@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.8.8/brython.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Brython_Resta-um</title>
+</head>
+
+<body onload="brython()">
+    <script type="text/python">
+        
+        from browser import document
+        from component import jogo
+
+        document <= jogo()
+
+    </script>
+    <script type="text/javascript">
+        function celula(){
+            alert(this.value)
+        }
+    </script>
+</body>
+</html>

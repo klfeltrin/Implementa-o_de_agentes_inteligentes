@@ -1,0 +1,3 @@
+diagrama de classe
+diagrama de sequencia
+diagrama de pacote
