@@ -10,7 +10,7 @@ class JogoClassificacaoLista(AbstractRegrasJogo):
         self.pontuacao = 0
 
     def registrarAgentePersonagem(self, personagem=Personagens.O_JOGADOR):
-        """ Só há um agente, o jogador, então não preciso de lógica.
+        """ Só há um agente, o jogador, então não preciso de 1lógica.
         """
         return 1
     

@@ -27,6 +27,6 @@ def construir_agente(*args, **kwargs):
     from agentes.humano import AgentePrepostoESHumano
 
     if args[0] == TiposAgentes.PREPOSTO_HUMANO:
-        return AgentePrepostoESHumano()
+        return  ()
     else:
         raise NotImplementedError()

@@ -1,64 +1,72 @@
-body {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    margin: 0px;
-}
-
-.jogo {
-    LINE-HEIGHT: 0PX;
-    font-size: 50PX;
-    margin: 0 auto;
-}
-
-.jogo tr td {
-    border: 1px solid black;
-    padding: 20px;
-}
-
-.jogo tr td A {
-    vertical-align: text-top;
-    cursor: pointer;
-}
-
-.desenv {
-    top: 0%;
-    right: 7%;
-    max-width: 86%;
-    display: block;
-    position: fixed;
-    z-index: 10000;
-}
-
-.desenv .toast {
-    top: 0px;
-    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
-}
-
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 1;
+    body {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        margin: 0px;
     }
-    100% {
-        opacity: 1;
+    
+    .jogo {
+        LINE-HEIGHT: 0PX;
+        font-size: 50PX;
+        margin: 0 auto;
     }
-}
-
-.desenv .toast {
-    border-radius: 2px;
-    margin-top: 10px;
-    min-height: 36px;
-    background-color: #323232;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    cursor: default;
-}
+    
+    .jogo tr td {
+        border: 1px solid black;
+        padding: 20px;
+        pointer-events: none;
+    }
+    
+    .jogo tr td A {
+        vertical-align: text-top;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    .acao{
+        background-color: green;
+    }
+    .possibilidade{
+        background-color: yellow;
+    }
+    
+    .desenv {
+        top: 0%;
+        right: 7%;
+        max-width: 86%;
+        display: block;
+        position: fixed;
+        z-index: 10000;
+    }
+    
+    .desenv .toast {
+        top: 0px;
+        transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+        opacity: 0;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+    
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .desenv .toast {
+        border-radius: 2px;
+        margin-top: 10px;
+        min-height: 36px;
+        background-color: #323232;
+        padding: 10px 15px;
+        font-size: 1.5rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: default;
+    }

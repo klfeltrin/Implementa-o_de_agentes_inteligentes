@@ -5,8 +5,9 @@ def iniciar_jogo():
 
     for i in jogo.tabuleiro:
         print(i)
+
+    return jogo
         
-pass
 
 if __name__ == "__main__":
     iniciar_jogo()

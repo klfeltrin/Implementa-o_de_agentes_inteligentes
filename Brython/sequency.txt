@@ -1,0 +1,41 @@
+contruir o (jogo) <= preparacao 
+
+registrar ( jogador )
+
+init tempo de jogo = 0
+
+loop jogo is not fim  = () => {
+    mostrar o mundo para o jogador(gerar percepcao)
+
+    registrar açao do jogador
+
+    tempo ++
+}
+   
+[] 
+
+
+se = () => (soma( linha + coluna ) < 4,{
+    verifica baixo 
+    verifica direita
+}) 
+
+se = () =>(soma(linha + coluna) => 4 e <= 8,{
+    
+    linha > coluna 
+        cima 
+        direita
+    ou 
+
+    coluna > linha
+        baixo
+        esquerda    
+
+}
+
+se = () => (soma( linha + coluna ) >8,{
+    verifica cima 
+    verifica esquerda
+}) 
+
+
