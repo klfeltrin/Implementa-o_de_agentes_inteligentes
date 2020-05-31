@@ -1,11 +1,4 @@
 from regras_abstratas import AbstractRegrasJogo
-import sys
-
-from browser.html import A, DIV, BR, TABLE, TD, TR, BUTTON
-from browser.template import Template
-from browser import alert, document, console, timer
-
-
 
 class JogoClassificacaoLista(AbstractRegrasJogo):
 
@@ -19,8 +12,8 @@ class JogoClassificacaoLista(AbstractRegrasJogo):
             '.......',
             '  ...  ',
             '  ...  '
-        ]  
-    
+        ] 
+
         self.tabuleiro = [
             '  ,,,  ',
             '  ,,,  ',
@@ -30,8 +23,6 @@ class JogoClassificacaoLista(AbstractRegrasJogo):
             '  ,.,  ',
             '  ,,,  '
         ]   
-    
-
     def isFim(self):
         for line in range(len(self.tabuleiro)):
             for colum in range(len(self.tabuleiro)) :
@@ -53,18 +44,6 @@ class JogoClassificacaoLista(AbstractRegrasJogo):
                             self.tabuleiro[line - 2][colum] == ',' ):
                             return True
         return False
-
-                
-        '''retorno = False
-        for line in self.tabuleiro:
-            for colum in line :
-                if colum == '.':
-                    if retorno == True:
-                        return False
-                    else:
-                        retorno = True 
-        return True  
-        ''' 
 
     def registrarProximaAcao(self, acao_line, acao_colum):
         self.acao  =  [int(acao_line) , int(acao_colum)] 

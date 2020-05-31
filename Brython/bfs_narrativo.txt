@@ -1,0 +1,9 @@
+agente chama a busca
+
+construir os filhos
+    busca p/ encontrar os nó filhos
+
+salvar cada um dos nós
+    
+cada nó filho chama outra busca
+
