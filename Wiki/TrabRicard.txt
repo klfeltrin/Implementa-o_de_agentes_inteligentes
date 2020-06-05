@@ -1,0 +1,51 @@
+jogo:{
+   tabuleiro:{
+	espaços_vazios = []
+	espaços_com_peca = []
+    },
+
+   evento = selecionar_peca => jogo(espaço_com_peca){
+	se (espaço_com_peca possui um movimento valido) then:{
+	   executa o movimento
+	   se (tabuleiro esta em estado final)then:{
+		retorn (jogo.fim)
+	   }senao{
+		return jogo.tabuleiro
+	   } 
+	}senao{
+	   return (jogo.tabuleito.espaço_com_peca) 
+	}
+    }
+
+    estado_inicial : {
+	32 peças no tabuleiro, deixando vazia a posição central.
+    } 
+    estado_intermediario : {
+	Pegar uma peça e fazê-la "saltar" sobre outra peça.
+	A peça que foi "saltada" é retirada do tabuleiro.
+	Se ainda houver movimentos validos o jogo permacene em estado_intermediario
+    }
+    estado_final : {
+	O jogo termina quando não é mais possível fazer nenhum outro movimento.
+	O jogador ganha se restar apenas uma peça no tabuleiro
+    }
+	
+} 
+
+
+jogador:{
+   selecionar_peca = (espaço_com_peca) => jogo {
+	   O jogador tem a liberdade de escolher um espaço_com_peça
+	dentro do tabuleiro do jogo para fazer o movimento
+
+	}.se return == (jogo.tabuleiro) => {
+	   O jogo retorna o tabuleiro como campo de visao ao jogador
+			
+	}.se return == (jogo.tabuleito.espaço_com_peca) => {
+	   O jogo retorna a peça pois o movimento foi dado como invalido
+
+	}.se return == (jogo.fim) => {
+	   O jogo informa ao jogador sobre o fim de jogo	
+	}
+    
+}

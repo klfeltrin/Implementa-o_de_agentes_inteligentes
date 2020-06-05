@@ -35,7 +35,7 @@ class agente():
                             return [line , colum] 
         pass
 
-    def construir_agente():
+    def construair_agente():
         
         return agente()
 
